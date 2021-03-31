@@ -1,16 +1,16 @@
 const findKeyByValue = function(tvShows, showTitle) {
   for (const [genre, title] of Object.entries(tvShows)) {
-    if (title === showTitle ) {
+    if (title === showTitle) {
       console.log(genre);
-      return genre
+      return genre;
     }
   }
-}
+};
 
 
 
-const bestTVShowsByGenre = { 
-  sci_fi: "The Expanse",
+const bestTVShowsByGenre = {
+  sciFi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
   drama:  "The Wire"
 };

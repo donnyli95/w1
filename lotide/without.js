@@ -2,12 +2,12 @@
 const without = function(source, itemsToRemove) {
   let newArray = [];
   for (let i = 0; i < source.length; i++) {
-     if (!itemsToRemove.includes(source[i])) {
-       newArray.push(source[i]);
-     } 
+    if (!itemsToRemove.includes(source[i])) {
+      newArray.push(source[i]);
     }
+  }
   return newArray;
-}
+};
 
 // nothing using array methods
 const without2 = function(source, itemsToRemove) {
@@ -21,12 +21,13 @@ const without2 = function(source, itemsToRemove) {
   }
 
   return newArray;
-}
+};
 
 // TEST CASES
-console.log(without2([1, 2, 3], [1])) // => [2, 3]
+console.log(without([1, 2, 3], [1])); // => [2, 3]
+console.log(without2([1, 2, 3], [1])); // => [2, 3]
 
-console.log(without2(["1", "2", "3"], [1, 2, "3"])) // => ["1", "2"]
+console.log(without2(["1", "2", "3"], [1, 2, "3"])); // => ["1", "2"]
 
 
 // TESTING CODE USAGE
@@ -39,7 +40,7 @@ const eqArrays = function(array1, array2) {
   return true;
 };
 
-const assertArraysEqual = function (array1, array2) {
+const assertArraysEqual = function(array1, array2) {
   if (eqArrays(array1, array2)) {
     console.log(`✅✅✅ Assertion Passed: ${array1} === ${array2}`);
   } else {
@@ -48,6 +49,6 @@ const assertArraysEqual = function (array1, array2) {
 };
 
 const words = ["hello", "world", "lighthouse"];
-console.log(without2(words, ["lighthouse"])); 
+console.log(without2(words, ["lighthouse"]));
 
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);

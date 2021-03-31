@@ -1,8 +1,8 @@
 const countLetters = function(string) {
-  const results = {}
+  const results = {};
 
   for (const letters of string) {
-    if (letters !== ' '){
+    if (letters !== ' ') {
       if (!results[letters]) {
         results[letters] = 1;
       } else {
@@ -13,7 +13,7 @@ const countLetters = function(string) {
   
   console.log(results);
   return results;
-}
+};
 
 countLetters("light house labs");
 

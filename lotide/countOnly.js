@@ -3,7 +3,7 @@
 
 const countOnly = function(allItems, itemsTocount) {
   const results = {
-  }
+  };
 
   for (const item of allItems) {
     if (itemsTocount[item]) {
@@ -19,7 +19,7 @@ const countOnly = function(allItems, itemsTocount) {
 
   console.log(results);
   return results;
-}
+};
 
 
 

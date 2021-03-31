@@ -1,10 +1,10 @@
 const letterPositions = function(sentence) {
   const results = {};
   // logic to update results
-  for (i = 0; i < sentence.length; i++) {
+  for (let i = 0; i < sentence.length; i++) {
     if (sentence[i] !== ' ') {
       if (!results[sentence[i]]) {
-        results[sentence[i]] =[];
+        results[sentence[i]] = [];
         results[sentence[i]].push(i);
       } else {
         results[sentence[i]].push(i);
@@ -13,10 +13,10 @@ const letterPositions = function(sentence) {
   }
 
   console.log(results);
-  return results; 
-}
+  return results;
+};
 
-letterPositions("hello donny")
+letterPositions("hello donny");
 
 const eqArrays = function(array1, array2) {
   for (let i = 0; i < array1.length; i++) {
@@ -27,7 +27,7 @@ const eqArrays = function(array1, array2) {
   return true;
 };
 
-const assertArraysEqual = function (array1, array2) {
+const assertArraysEqual = function(array1, array2) {
   if (eqArrays(array1, array2)) {
     console.log(`✅✅✅ Assertion Passed: ${array1} === ${array2}`);
   } else {

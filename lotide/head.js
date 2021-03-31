@@ -6,11 +6,11 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const head = function (array) {
+const head = function(array) {
   if (array.length > 0) {
-    return array[0]
+    return array[0];
   } else {
-    return undefined
+    return undefined;
   }
 
 };
@@ -18,4 +18,4 @@ const head = function (array) {
 // TEST CASES
 assertEqual(head([5,6,7]), 5);
 assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Lighthouse");assertEqual(head([]), "Lighthouse");
+assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Lighthouse"); assertEqual(head([]), "Lighthouse");
