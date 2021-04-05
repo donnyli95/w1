@@ -28,7 +28,7 @@ const calculateSalesTax = function(salesData, taxRates) {
   // Implement your code here
   let taxObj = {};
   
-  for (index in companySalesData) {
+  for (const index in companySalesData) {
     // calculate total sales and total tax of each object in array
     let salesProv = companySalesData[index].sales.reduce((a,b) => a + b, 0);
     let taxProv = salesProv * salesTaxRates[companySalesData[index].province];
@@ -36,10 +36,9 @@ const calculateSalesTax = function(salesData, taxRates) {
     // filling out final object
     if (companySalesData[index].name in taxObj) {
       // if key exists, add to current key.value
-      console.log(salesProv, taxProv);
-      console.log(taxObj.Telus.totalSales);
-      companySalesData[index].name.totalSales += salesProv;
-      companySalesData[index].name.totalTax += taxProv;
+      // the object here is the supposed to update but it doesnt???
+      taxObj[companySalesData[index].name].totalSales += salesProv;
+      taxObj[companySalesData[index].name].totalTax += taxProv;
     }
 
     
@@ -48,18 +47,18 @@ const calculateSalesTax = function(salesData, taxRates) {
       taxObj[companySalesData[index].name] = {
         totalSales: salesProv, //filler sales total
         totalTax: taxProv // filler tax total
-      }
-    } 
+      };
+    }
 
 
   }
   
-  console.log(taxObj)
-  return taxObj
-}
+  console.log(taxObj);
+  return taxObj;
+};
 
 // Test Results:
-const results = calculateSalesTax(companySalesData, salesTaxRates)
+const results = calculateSalesTax(companySalesData, salesTaxRates);
 
 /* Expected Results:
 {
