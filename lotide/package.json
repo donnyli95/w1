@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@bunbun69/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "Lodash library copy from LHL",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -9,7 +9,10 @@
   "scripts": {
     "test": "mocha"
   },
-  "author": "",
+  "author": {
+    "name" : "Donny Li",
+    "email" : "sz3li@uwaterloo.ca"
+  },
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.3.4",
